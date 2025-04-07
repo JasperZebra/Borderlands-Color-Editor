@@ -1,4 +1,6 @@
 # Borderlands Color Editor
+![color_editor_icon](https://github.com/user-attachments/assets/50bbb669-2d89-4ec6-8c7b-fe49a94fe6e6)
+
 **Borderlands Color Editor** is a program where you can easily change the color of your character to whatever color you want.
 
 # Screenshots:
