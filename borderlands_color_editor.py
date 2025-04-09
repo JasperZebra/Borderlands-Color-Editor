@@ -29,8 +29,8 @@ class BorderlandsColorEditor:
         self.modified = False
         self.color_values = {
             "color1": tk.StringVar(value="#CCCCCC"),
-            "color2": tk.StringVar(value="#111111"),
-            "color3": tk.StringVar(value="#111111")
+            "color2": tk.StringVar(value="#CCCCCC"),
+            "color3": tk.StringVar(value="#CCCCCC")
         }
         
         # Create the UI
@@ -158,13 +158,13 @@ class BorderlandsColorEditor:
         title_frame.pack(fill=tk.X, pady=(0, 20))
         
         # Title with Borderlands-style text
-        title_label = tk.Label(title_frame, text="BORDERLANDS COLOR EDITOR", 
+        title_label = tk.Label(title_frame, text="BORDERLANDS COLOR EDITOR                   v1.2", 
                            font=('Impact', 28), bg=self.colors['background'], 
                            fg=self.colors['yellow'])
         title_label.pack(pady=10)
         
         # File selection section
-        file_frame = ttk.LabelFrame(main_frame, text="Save File", padding=15)
+        file_frame = ttk.LabelFrame(main_frame, text="SAVE FILE", padding=15)
         file_frame.pack(fill=tk.X, pady=(0, 20))
         
         self.file_path_var = tk.StringVar()
@@ -172,11 +172,11 @@ class BorderlandsColorEditor:
         file_entry.pack(side=tk.LEFT, padx=(0, 15), fill=tk.X, expand=True)
         
         # Borderlands-style orange button
-        browse_button = ttk.Button(file_frame, text="BROWSE", command=self.browse_file, width=15)
+        browse_button = ttk.Button(file_frame, text="LOAD SAVE", command=self.browse_file, width=15)
         browse_button.pack(side=tk.LEFT)
         
         # Color editing section
-        color_frame = ttk.LabelFrame(main_frame, text="Character Colors", padding=15)
+        color_frame = ttk.LabelFrame(main_frame, text="CHARACTER COLORS", padding=15)
         color_frame.pack(fill=tk.X, pady=(0, 20))
         
         # Create color displays and controls
@@ -185,9 +185,9 @@ class BorderlandsColorEditor:
         
         # Labels for color categories - more Borderlands-like descriptions
         color_descriptions = [
-            ("color1", "PRIMARY COLOR"),
-            ("color2", "SECONDARY COLOR"),
-            ("color3", "ACCENT COLOR")
+            ("color1", "COLOR 1"),
+            ("color2", "COLOR 2"),
+            ("color3", "COLOR 3")
         ]
         
         # Grid layout with cell-shaded borders
@@ -210,7 +210,7 @@ class BorderlandsColorEditor:
             ttk.Label(color_frame, textvariable=hex_var, width=8, style='Value.TLabel').grid(row=row, column=2, padx=15, pady=12)
             
             # Change button - with Borderlands-style uppercase text
-            change_button = ttk.Button(color_frame, text="CHANGE", 
+            change_button = ttk.Button(color_frame, text="CHANGE COLOR", 
                                      command=lambda c=color_name: self.choose_color(c), width=15)
             change_button.grid(row=row, column=3, padx=10, pady=12)
         
