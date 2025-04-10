@@ -8,7 +8,7 @@ from common_utils import BorderlandsTheme, ColorPicker
 class PCColorEditor:
     def __init__(self, root):
         self.root = root
-        self.root.title("Borderlands Color Editor (PC) | Made by: Jasper_Zebra")
+        self.root.title("Borderlands Color Editor (PC) | Made by: Jasper_Zebra | Version 1.5")
         self.root.geometry("900x800")  # Increased height for scan section
         self.root.resizable(False, False)
         
